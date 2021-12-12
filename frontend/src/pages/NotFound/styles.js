@@ -9,15 +9,17 @@ export const Container = styled.div`
   justify-content: center;
   h1 {
     color: #454545;
+    font-size: 3rem;
   }
 `;
 
 export const Button = styled(Link)`
-  padding: 12px 24px;
+  padding: 1.2rem 2.4rem;
   background: #04D1D2;
   font-weight: 700;
   color: #FFF;
-  border-radius: 4px;
+  border-radius: .4rem;
   text-decoration: none;
-  margin-top: 36px;
+  margin-top: 3.6rem;
+  font-size: 1.4rem;
 `;

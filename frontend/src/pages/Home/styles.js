@@ -2,19 +2,19 @@ import styled from 'styled-components';
 
 export const Container = styled.main`
   display: grid;
-  grid-template-columns: 226px 1fr;
-  grid-template-rows: 42px 1fr;
+  grid-template-columns: 22.6rem 1fr;
+  grid-template-rows: 4.2rem 1fr;
   grid-template-areas:
             "history history"
             "sideNavigation content";
-  margin: 24px 0;
+  margin: 2.4rem 0;
   .historyNavigation {
     grid-area: history;
-    height: 20px;
-    font-size: 14px;
+    height: 2rem;
+    font-size: 1.4rem;
 
     span {
-      margin: 0 6px;
+      margin: 0 .6rem;
       color: #ACACAC;
       :last-child {
         display: none;
@@ -34,26 +34,26 @@ export const Container = styled.main`
 
 export const FilterContainer = styled.div`
   grid-area: sideNavigation;
-  width: 226px;
+  width: 22.6rem;
   border: 1px solid ${({ theme }) => theme.colors.grey[300]};
   height: fit-content;
-  padding: 43px 18px;
-  padding-top: 13px;
+  padding: 4.3rem 1.8rem;
+  padding-top: 1.3rem;
 
   h2 {
-    font-size: 24px;
+    font-size: 2.4rem;
     color: ${({ theme }) => theme.colors.main.primary};
   }
 `;
 
 export const FilterBy = styled.div`
-  margin-top: 14px;
-  margin-bottom: 38px;
+  margin-top: 1.4rem;
+  margin-bottom: 3.8rem;
 
   h3 {
-    font-size: 18px;
+    font-size: 1.8rem;
     color: ${({ theme }) => theme.colors.main.secondaryDark};
-    margin-bottom: 12px;
+    margin-bottom: 1.2rem;
   }
 
 
@@ -61,12 +61,12 @@ export const FilterBy = styled.div`
 
 export const FilterOption = styled.ul`
   li {
-    font-size: 16px;
+    font-size: 1.6rem;
     list-style-position: inside;
     color: ${({ theme }) => theme.colors.grey[400]};
 
     ::marker {
-      font-size: 14px;
+      font-size: 1.4rem;
       color: ${({ theme }) => theme.colors.grey[400]};
     }
 
@@ -84,24 +84,24 @@ export const FilterOption = styled.ul`
 `;
 
 export const FilterColorOption = styled.div`
-  width: 48px;
-  height: 24px;
+  width: 4.8rem;
+  height: 2.4rem;
   background: ${({ color }) => color};
 
   & + & {
-    margin-left: 3px;
+    margin-left: .3rem;
   }
 `;
 
 export const Content = styled.div`
   grid-area: content;
-  margin-left: 24px;
+  margin-left: 2.4rem;
 
 `;
 
 export const HeaderContent = styled.div`
   h2 {
-    font-size: 32px;
+    font-size: 3.2rem;
     font-weight: 400;
     color: ${({ theme }) => theme.colors.main.primary};
   }
@@ -111,25 +111,25 @@ export const SubHeaderContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 0;
+  padding: 1.2rem 0;
   border-top: 1px solid ${({ theme }) => theme.colors.grey[300]};
-  margin-top: 8px;
+  margin-top: .8rem;
 
   div:first-child {
     img {
-      width: 20px;
-      height: 20px;
+      width: 2rem;
+      height: 2rem;
 
       + img {
-        margin-left: 6px;
+        margin-left: .6rem;
       }
     }
   }
 
   strong {
     color: ${({ theme }) => theme.colors.grey[400]};
-    margin-right: 13px;
-    font-size: 11px;
+    margin-right: 1.3rem;
+    font-size: 1.1rem;
     text-transform: uppercase;
   }
 
@@ -139,7 +139,7 @@ export const SubHeaderContent = styled.div`
     background: #FFF;
     border-radius: 5px;
     padding: 4px;
-    width: 216px;
+    width: 21.6rem;
 
     color: #8E8E8E;
   }
@@ -148,10 +148,10 @@ export const SubHeaderContent = styled.div`
 export const ListProducts = styled.div`
   position: relative;
   display: grid;
-  grid-template-columns: repeat(4, 212px);
-  grid-gap: 20px;
-  margin-top: 42px;
-  margin-bottom: 24px;
+  grid-template-columns: repeat(4, 21.2rem);
+  grid-gap: 2rem;
+  margin-top: 4.2rem;
+  margin-bottom: 2.4rem;
 
   .product__not__found {
     position: absolute;
@@ -162,9 +162,9 @@ export const ListProducts = styled.div`
 
     text-align: center;
     h4 {
-      width: 299px;
+      width: 29.9rem;
       color: #3C3B3B;
-      font-size: 18px;
+      font-size: 1.8rem;
     }
 
     div {
@@ -173,29 +173,30 @@ export const ListProducts = styled.div`
       align-items: center;
       p {
         color: #4E4E4E;
-        margin-top: 10px;
-        margin-bottom: 30px;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        font-size: 1.4rem;
       }
 
       button {
-        padding: 12px 24px;
+        padding: 1.2rem 2.4rem;
         background: #04D1D2;
         font-weight: 700;
         color: #FFF;
         border-radius: 4px;
         border: none;
         box-shadow: 0px 2px 7px rgba(65, 185, 185, 0.53);
-        font-size: 14px;
+        font-size: 1.4rem;
         cursor: pointer;
-        width: 200px;
+        width: 20rem;
 
         &.last__button {
           background: #dddd;
-          margin-top: 8px;
+          margin-top: .8rem;
           color: #818181;
           box-shadow: none;
           font-weight: 400;
-          width: 180px;
+          width: 18rem;
 
         }
       }

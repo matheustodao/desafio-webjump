@@ -16,8 +16,8 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     color: ${({ theme }) => theme.colors.main.secondary};
-    width: 18px;
-    height: 18px;
+    width: 1.8rem;
+    height: 1.8rem;
     max-width: 100%;
     max-height: 100%;
 
@@ -27,11 +27,11 @@ export const Container = styled.div`
     }
     :nth-child(1) {
       transform: rotate(180deg);
-      margin-right: 18px;
+      margin-right: 1.8rem;
     }
 
     :last-child {
-      margin-left: 18px;
+      margin-left: 1.8rem;
     }
   }
 
@@ -45,9 +45,9 @@ export const ContainerPages = styled.div`
 export const NumberPage = styled.button`
     color: ${({ theme, isCurrentPage }) => (isCurrentPage ? theme.colors.main.primary : theme.colors.grey[500])};
     font-weight: ${({ isCurrentPage }) => (isCurrentPage ? '700' : '400')};
-    font-size: 16px;
+    font-size: 1.6rem;
 
     & + & {
-      margin-left: 18px;
+      margin-left: 1.8rem;
     }
 `;

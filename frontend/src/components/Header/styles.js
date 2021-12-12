@@ -9,15 +9,15 @@ export const Container = styled.header`
   left: 0;
 
   .top__header {
-    padding: 4px 102px;
+    padding: .4rem 10.2rem;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     background: ${({ theme }) => theme.colors.main.black};
     color: #FFF;
-    font-size: 14px;
+    font-size: 1.4rem;
     span {
-      padding: 6px;
+      padding: .6rem;
     }
     a {
       text-decoration: underline;
@@ -32,7 +32,7 @@ export const SubHeader = styled.div`
   width: 100%;
   flex-direction: column;
   .main__header {
-    padding: 30px 102px;
+    padding: 3rem 10.2rem;
 
     display: flex;
     align-items: center;
@@ -63,6 +63,7 @@ export const Router = styled.ul`
 
   li {
     list-style: none;
+    font-size: 1.6rem;
 
     a {
       text-decoration: none;

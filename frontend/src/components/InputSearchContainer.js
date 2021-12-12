@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const InputSearchContainer = styled.form`
-  width: 512px;
-  height: 44px;
+  width: 51.2rem;
+  height: 4.4rem;
   display: flex;
   align-items: center;
 
@@ -11,7 +11,7 @@ export const InputSearchContainer = styled.form`
     height: 100%;
     border: 1px solid #959595;
 
-    padding: 16px;
+    padding: 1.6rem;
 
     &::-webkit-search-cancel-button {
       appearance: none;
@@ -22,11 +22,11 @@ export const InputSearchContainer = styled.form`
   }
 
   button {
-    padding: 10px 24px;
+    padding: 1.0rem 2.4rem;
     height: 100%;
     color: #FFF;
     font-weight: 800;
-    font-size: 16px;
+    font-size: 1.6rem;
     border: none;
     background: ${({ theme, colorButtonSearch }) => (
     !colorButtonSearch

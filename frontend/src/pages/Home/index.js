@@ -186,7 +186,7 @@ export default function Home() {
             >
               <input
                 type="search"
-                placeholder="Pesquisar produto..."
+                placeholder="Nome do produto..."
                 ref={searchTerm}
               />
               <button type="submit" onClick={handleSearchTerm}>buscar</button>
