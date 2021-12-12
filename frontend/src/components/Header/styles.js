@@ -54,6 +54,14 @@ export const SubHeader = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
+
+  #logo {
+    max-width: 262px;
+    max-height: 50px;
+    width: 100%;
+    height: 100%:
+  }
+
   .main__header {
     padding: 3rem 0rem;
     max-width: 90%;

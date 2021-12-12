@@ -10,7 +10,7 @@ import {
 
 import SideBar from '../SideBar';
 
-import logo from '../../assets/images/logo.png';
+import logo from '../../assets/images/logo.svg';
 import shoppingCart from '../../assets/images/icons/shopping-cart.svg';
 import sideBarIcon from '../../assets/images/icons/side-bar.svg';
 import closeIcon from '../../assets/images/icons/close.svg';
@@ -45,8 +45,8 @@ export default function Header({ children }) {
                 : <img src={sideBarIcon} alt="Open side bar" />}
             </button>
           </div>
-          <Link to="/">
-            <img src={logo} alt="Webjump" />
+          <Link alt="Voltar para pagina de bem vindo(a) " to="/">
+            <img id="logo" src={logo} alt="Webjump" />
           </Link>
 
           <div className="box__search">

@@ -228,13 +228,11 @@ export default function Home() {
 
           <FilterBy>
             <h3>Cores</h3>
-            <FilterOption>
-              <div className="filter__color__option__container">
-                <FilterColorOption color="#CB0D1F" />
-                <FilterColorOption color="#F26324" />
-                <FilterColorOption color="#27A3A9" />
-              </div>
-            </FilterOption>
+            <div className="filter__color__option__container">
+              <FilterColorOption color="#CB0D1F" />
+              <FilterColorOption color="#F26324" />
+              <FilterColorOption color="#27A3A9" />
+            </div>
           </FilterBy>
 
           <FilterBy>

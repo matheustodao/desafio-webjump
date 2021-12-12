@@ -80,8 +80,12 @@ export const FilterBy = styled.div`
     color: ${({ theme }) => theme.colors.main.secondaryDark};
     margin-bottom: 1.2rem;
   }
-
-
+  .filter__color__option__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
 `;
 
 export const FilterOption = styled.ul`
@@ -99,12 +103,6 @@ export const FilterOption = styled.ul`
       text-decoration: none;
       color: ${({ theme }) => theme.colors.grey[400]};
     }
-  }
-
-  .filter__color__option__container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
   }
 `;
 
