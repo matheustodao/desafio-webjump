@@ -1,8 +1,9 @@
+require('dotenv/config');
 var app = require('connect')()
 var serveStatic = require('serve-static')
 var cors = require('cors');
 
-app.use(cors())
+app.use(cors(process.env.FRONTEND_APPLICATION_URL))
 // Serve up mock-api folder
 app.use('/api', serveStatic('mock-api', {
   'index': false,
