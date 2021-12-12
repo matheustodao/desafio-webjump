@@ -1,14 +1,17 @@
+import PropTypes from 'prop-types';
+
 import { Link } from 'react-router-dom';
 import {
   Container,
   SubHeader,
-  InpuSearchContainer,
   Router,
 } from './styles';
 
 import logo from '../../assets/images/logo.png';
+import shoppingCart from '../../assets/images/icons/shopping-cart.svg';
+import sideBar from '../../assets/images/icons/side-bar.svg';
 
-export default function Header() {
+export default function Header({ children }) {
   return (
     <Container>
       <div className="top__header">
@@ -18,15 +21,19 @@ export default function Header() {
       </div>
 
       <SubHeader>
+
         <div className="main__header">
+          <div className="icons">
+            <img src={sideBar} alt="Menu de navegação" />
+          </div>
           <Link to="/">
             <img src={logo} alt="Webjump" />
           </Link>
 
-          <InpuSearchContainer>
-            <input type="search" placeholder="Buscar por..." />
-            <button type="button">BUSCAR</button>
-          </InpuSearchContainer>
+          { children }
+          <div className="icons">
+            <img src={shoppingCart} alt="Carrinho" />
+          </div>
         </div>
         <nav>
           <Router>
@@ -47,7 +54,7 @@ export default function Header() {
             </li>
 
             <li>
-              <Link to="/pagina-inicial/contatos">Contato</Link>
+              <Link to="/contatos">Contato</Link>
             </li>
           </Router>
         </nav>
@@ -55,3 +62,11 @@ export default function Header() {
     </Container>
   );
 }
+
+Header.propTypes = {
+  children: PropTypes.node,
+};
+
+Header.defaultProps = {
+  children: null,
+};

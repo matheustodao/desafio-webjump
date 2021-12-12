@@ -4,6 +4,9 @@ export const Container = styled.header`
   display: flex;
   flex-direction: column;
   width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 
   .top__header {
     padding: 4px 102px;
@@ -34,45 +37,20 @@ export const SubHeader = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    img {
+    a img {
       width: 186px;
       height: 52px;
     }
-  }
 
-`;
-
-export const InpuSearchContainer = styled.div`
-  width: 512px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-
-  input {
-    width: 100%;
-    height: 100%;
-    border: 1px solid #959595;
-
-    padding: 16px;
-
-    &::-webkit-search-cancel-button {
-      appearance: none;
-    }
-    &::placeholder {
-      color: #BCBCBC;
+    .icons {
+      img {
+        width: 30px;
+        height: 30px;
+      }
+      display: none;
     }
   }
 
-  button {
-    padding: 10px 24px;
-    height: 100%;
-    color: #FFF;
-    font-weight: 800;
-    font-size: 16px;
-    border: none;
-    background: ${({ theme }) => theme.colors.main.primary};
-    cursor: pointer;
-  }
 `;
 
 export const Router = styled.ul`
