@@ -7,15 +7,24 @@ export const Container = styled.header`
   position: absolute;
   top: 0;
   left: 0;
+  margin-bottom: 214px;
 
   .top__header {
-    padding: .4rem 10.2rem;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     background: ${({ theme }) => theme.colors.main.black};
     color: #FFF;
     font-size: 1.4rem;
+    width: 100%;
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin: 0 auto;
+      max-width: 90%;
+      width: 100%;
+
+    }
     span {
       padding: .6rem;
     }
@@ -24,16 +33,32 @@ export const Container = styled.header`
       color: #FFF;
       font-weight: 700;
     }
+
+    @media screen and (max-width: 1302px) {
+      padding-right: 2%;
+      padding-left: 2%;
+    }
   }
 
-  `;
+  .box__search {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    @media screen and (max-width: 578px) {
+      display: none;
+    }
+  }
+`;
 export const SubHeader = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
   .main__header {
-    padding: 3rem 10.2rem;
-
+    padding: 3rem 0rem;
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -48,19 +73,29 @@ export const SubHeader = styled.div`
         height: 30px;
       }
       display: none;
+
+      @media screen and (max-width: 578px) {
+        display: flex;
+      }
     }
   }
 
+  nav {
+    background: ${({ theme }) => theme.colors.main.primary};
+
+
+    @media screen and (max-width: 578px) {
+      display: none;
+    }
+  }
 `;
 
 export const Router = styled.ul`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 100%;
-  background: ${({ theme }) => theme.colors.main.primary};
-  padding: 18px 102px;
-
+  width: 90%;
+  margin: 1.8rem auto;
   li {
     list-style: none;
     font-size: 1.6rem;
@@ -77,4 +112,17 @@ export const Router = styled.ul`
     }
   }
 
+  @media screen and (max-width: 842px) {
+    li + li {
+      margin-left: 4.0rem;
+    }
+  }
+
+  @media screen and (max-width: 666px) {
+    li + li {
+      font-size: 1.4rem;
+      margin-left: 2.4rem;
+
+    }
+  }
 `;

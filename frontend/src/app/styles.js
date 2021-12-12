@@ -5,10 +5,13 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 214px 0px;
-  padding-bottom: 0;
-  margin: 0 95px;
+  padding-top: 214px;
+  margin: 0 5%;
   max-width: 90%;
-  width: 100%
+  width: 100%;
 
+
+  @media screen and (max-width: 578px) {
+    padding-top: 15.4rem;
+  }
 `;

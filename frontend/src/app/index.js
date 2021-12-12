@@ -18,8 +18,8 @@ export default function App() {
         <Header />
         <Container>
           <Router />
-          <Footer />
         </Container>
+        <Footer />
       </ThemeProvider>
     </BrowserRouter>
   );

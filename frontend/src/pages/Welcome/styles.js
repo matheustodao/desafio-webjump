@@ -31,6 +31,9 @@ export const SideNavigation = styled.div`
 
     }
   }
+  @media screen and (max-width: 578px) {
+    display: none;
+  }
 
 `;
 
@@ -45,6 +48,17 @@ export const Header = styled.div`
   height: 28.0rem;
   background: #ACACAC;
 
+  @media screen and (max-width: 778px) {
+    height: 16.5rem;
+  }
+
+  @media screen and (max-width: 578px) {
+    height: 15.6rem;
+  }
+
+  @media screen and (max-width: 378px) {
+    height: 8.6rem;
+  }
 `;
 
 export const Content = styled.div`

@@ -15,9 +15,11 @@ export default function Header({ children }) {
   return (
     <Container>
       <div className="top__header">
-        <Link to="/sign-in">Acesse sua Conta</Link>
-        <span>ou</span>
-        <Link to="/sign-up">Cadastre-se</Link>
+        <div>
+          <Link to="/sign-in">Acesse sua Conta</Link>
+          <span>ou</span>
+          <Link to="/sign-up">Cadastre-se</Link>
+        </div>
       </div>
 
       <SubHeader>
@@ -30,7 +32,9 @@ export default function Header({ children }) {
             <img src={logo} alt="Webjump" />
           </Link>
 
-          { children }
+          <div className="box__search">
+            { children }
+          </div>
           <div className="icons">
             <img src={shoppingCart} alt="Carrinho" />
           </div>

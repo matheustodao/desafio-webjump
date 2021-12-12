@@ -10,6 +10,7 @@ export const Container = styled.div`
   h1 {
     color: #454545;
     font-size: 3rem;
+    text-align: center;
   }
 `;
 

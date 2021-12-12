@@ -14,7 +14,7 @@ export const Container = styled.div`
     font-size: 18px;
     border: none;
     color: #FFF;
-    padding: 8px 24px;
+    padding: .8rem 2.4rem;
     border-radius: 5px;
     cursor: pointer;
   }
@@ -23,10 +23,11 @@ export const Container = styled.div`
 export const ImageWrapper = styled.div`
   max-width: 212px;
   max-height: 213px;
-  width: 212px;
-  height: 213px;
+  width: 100%;
+  height: 100%;
   padding: 9px 8px;
   border: 1px solid ${({ theme }) => theme.colors.grey[300]};
+
 
   img {
     width: 100%;
@@ -49,7 +50,7 @@ export const Information = styled.div`
     font-size: 16px;
     text-align: center;
     max-height: 44px;
-    height: 44px;
+    height: 100%;
   }
 `;
 
@@ -64,9 +65,24 @@ export const WrapperOfPrices = styled.div`
     font-weight: 800;
     font-size: 18px;
   }
+
+  @media screen and (max-width: 605px) {
+    flex-direction: column;
+    margin-top: 28px;
+    font-size: 2.1rem;
+    text-align: center;
+    justify-content: center;
+  }
 `;
 
 export const PriceOFF = styled.small`
   color: ${({ theme }) => theme.colors.grey[400]};
   margin-right: 16px;
+  text-decoration: line-through;
+  @media screen and (max-width: 605px) {
+    flex-direction: column;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    margin-right: 0;
+  }
 `;

@@ -13,6 +13,10 @@ export default createGlobalStyle`
     font-size: 62.5%;
   }
 
+  html, body {
+    min-height: 100vh;
+  }
+
   body {
     font-size: 1rem;
     font-weight: 400;

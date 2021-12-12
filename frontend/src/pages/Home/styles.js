@@ -8,6 +8,7 @@ export const Container = styled.main`
             "history history"
             "sideNavigation content";
   margin: 2.4rem 0;
+  width: 100%;
   .historyNavigation {
     grid-area: history;
     height: 2rem;
@@ -29,6 +30,23 @@ export const Container = styled.main`
         color: ${({ theme }) => theme.colors.main.secondary};
       }
     }
+
+
+    @media screen and (max-width: 577px) {
+      width: 100%;
+      padding: 0 2rem;
+    }
+
+    @media screen and (max-width: 551px) {
+      margin-bottom: 1.2rem;
+      padding: 0;
+    }
+  }
+
+  @media screen and (max-width: 577px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -43,6 +61,13 @@ export const FilterContainer = styled.div`
   h2 {
     font-size: 2.4rem;
     color: ${({ theme }) => theme.colors.main.primary};
+  }
+
+
+  @media screen and (max-width: 577px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
 `;
 
@@ -97,6 +122,10 @@ export const Content = styled.div`
   grid-area: content;
   margin-left: 2.4rem;
 
+
+  @media screen and (max-width: 551px) {
+    width: 100%;
+  }
 `;
 
 export const HeaderContent = styled.div`
@@ -123,26 +152,45 @@ export const SubHeaderContent = styled.div`
       + img {
         margin-left: .6rem;
       }
+
+    }
+    @media screen and (max-width: 689px) {
+      display: none;
+    }
+
+  }
+  .order__by {
+
+    strong {
+      color: ${({ theme }) => theme.colors.grey[400]};
+      margin-right: 1.3rem;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+    }
+
+    select {
+      border: none;
+      border: 1px solid ${({ theme }) => theme.colors.grey[300]};
+      background: #FFF;
+      border-radius: 5px;
+      padding: 4px;
+      width: 21.6rem;
+      color: #8E8E8E;
+    }
+
+    @media screen and (max-width: 635px) {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      strong {
+        font-size: 1rem;
+        text-align: center;
+      }
     }
   }
 
-  strong {
-    color: ${({ theme }) => theme.colors.grey[400]};
-    margin-right: 1.3rem;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-  }
-
-  select {
-    border: none;
-    border: 1px solid ${({ theme }) => theme.colors.grey[300]};
-    background: #FFF;
-    border-radius: 5px;
-    padding: 4px;
-    width: 21.6rem;
-
-    color: #8E8E8E;
-  }
 `;
 
 export const ListProducts = styled.div`
@@ -202,4 +250,46 @@ export const ListProducts = styled.div`
       }
     }
   }
+
+  /* @Media queries */
+
+  @media screen and (max-width: 1247px) {
+    grid-template-columns: repeat(4, 18rem);
+    justify-content: center;
+
+  }
+
+  @media screen and (max-width: 1147px) {
+    grid-template-columns: repeat(3, 18.5rem);
+
+  }
+
+
+  @media screen and (max-width: 982px) {
+    grid-template-columns: repeat(3, 15.3rem);
+  }
+
+
+  @media screen and (max-width: 872px) {
+    grid-template-columns: repeat(2, 21rem);
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, 18rem);
+    grid-gap: 12px;
+  }
+
+  @media screen and (max-width: 697px) {
+    grid-template-columns: repeat(2, 14.8rem);
+  }
+
+  @media screen and (max-width: 626px) {
+    grid-template-columns: repeat(2, 48%);
+  }
+
+  @media screen and (max-width: 551px) {
+    grid-template-columns: repeat(2, 45%);
+    width: 100%;
+  }
+
 `;

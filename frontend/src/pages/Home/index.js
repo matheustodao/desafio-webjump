@@ -266,7 +266,7 @@ export default function Home() {
                   <img src={listIcon} alt="Listar forma de lista" />
                 </div>
 
-                <div>
+                <div className="order__by">
                   <strong>Ordernar por</strong>
                   <select>
                     <option defaultChecked value="preco">Preço</option>

@@ -6,6 +6,10 @@ export const InputSearchContainer = styled.form`
   display: flex;
   align-items: center;
 
+  @media screen and (max-width: 856px) {
+    width: 30.5rem;
+  }
+
   input {
     width: 100%;
     height: 100%;
