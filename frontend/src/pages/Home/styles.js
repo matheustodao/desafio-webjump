@@ -200,6 +200,7 @@ export const ListProducts = styled.div`
   grid-gap: 2rem;
   margin-top: 4.2rem;
   margin-bottom: 2.4rem;
+  min-height: 16.8rem;
 
   .product__not__found {
     position: absolute;
