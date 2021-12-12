@@ -57,7 +57,7 @@ export default function Home() {
     if (filteredProducts) {
       return filteredProducts.length;
     }
-  }, filteredProducts, products);
+  }, [filteredProducts, products]);
 
   const {
     nextPage,
