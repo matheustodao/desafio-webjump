@@ -68,6 +68,14 @@ export const SubHeader = styled.div`
     }
 
     .icons {
+      button {
+        border: none;
+        background: none;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+      }
+
       img {
         width: 30px;
         height: 30px;

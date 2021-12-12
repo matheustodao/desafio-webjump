@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { Link } from 'react-router-dom';
@@ -7,11 +8,20 @@ import {
   Router,
 } from './styles';
 
+import SideBar from '../SideBar';
+
 import logo from '../../assets/images/logo.png';
 import shoppingCart from '../../assets/images/icons/shopping-cart.svg';
-import sideBar from '../../assets/images/icons/side-bar.svg';
+import sideBarIcon from '../../assets/images/icons/side-bar.svg';
+import closeIcon from '../../assets/images/icons/close.svg';
 
 export default function Header({ children }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  function handleToggleSideBar() {
+    setIsOpen((prevState) => !prevState);
+  }
+
   return (
     <Container>
       <div className="top__header">
@@ -26,7 +36,14 @@ export default function Header({ children }) {
 
         <div className="main__header">
           <div className="icons">
-            <img src={sideBar} alt="Menu de navegação" />
+            <button
+              type="button"
+              onClick={handleToggleSideBar}
+            >
+              {isOpen
+                ? <img src={closeIcon} alt="Close side bar" />
+                : <img src={sideBarIcon} alt="Open side bar" />}
+            </button>
           </div>
           <Link to="/">
             <img src={logo} alt="Webjump" />
@@ -63,6 +80,9 @@ export default function Header({ children }) {
           </Router>
         </nav>
       </SubHeader>
+      <SideBar
+        state={isOpen}
+      />
     </Container>
   );
 }
