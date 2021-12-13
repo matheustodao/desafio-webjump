@@ -2,13 +2,10 @@
 
 
 
-#### [Clica aqui](https://desafiowebjump.herokuapp.com/) para ver a aplicação funcionando.
-<br />
-<br />
+#### [Clica aqui](https://desafiowebjump.herokuapp.com/) para ver a aplicação funcionando.<br><br>
 
 Ou vai na pasta ***backend*** usa seguinte comandos no terminal.
-> `npm install` após a instalação da node_modules usa `npm start`
-<br />
+> `npm install` após a instalação da node_modules usa `npm start`.<br>
 
 Na pasta ***frontend*** usa seguinte comandos no terminal.
 > `yarn install` após a instalação da node_modules usa `yarn start`
@@ -50,11 +47,11 @@ Objetivo da minha carreira é me tornar desenvolvedor javascript fullstack (usan
 _______
 **Onde pode me encontrar**
 
-* [Linkedin](https://linkedin.com/in/matheustodao)
-* [Github](https://github.com/matheustodao)
-* [Meu Site](https://todaomatheus.vercel.app)
+* [Linkedin](https://linkedin.com/in/matheustodao)<br>
+* [Github](https://github.com/matheustodao)<br>
+* [Meu Site](https://todaomatheus.vercel.app)<br>
 _______
 
 **Os dois últimos projetos trabalhando atualmente**
-* [Lading Page de cryptos com os dados dinâmicos](https://github.com/matheustodao/crypto-cap)
-* [MyContacts CRUD de contatos](https://github.com/matheustodao/MyContacts)
+* [Lading Page de cryptos com os dados dinâmicos](https://github.com/matheustodao/crypto-cap)<br>
+* [MyContacts CRUD de contatos](https://github.com/matheustodao/MyContacts)<br>
