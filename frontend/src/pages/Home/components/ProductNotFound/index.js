@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import removeSpecialCharacters from '../../utils/removeSpecialCharacters';
 
 import { Container } from './styles';
 
@@ -9,7 +8,7 @@ export default function ProductNotFound({ category, onRedirect }) {
       <h4>Produto não encontrado nessa categoria!</h4>
 
       <div>
-        {removeSpecialCharacters(category.toLowerCase()) === 'pagina inicial'
+        {category.toLowerCase() === 'todas as categorias'
           ? (
             <>
               <p>Volte para à:</p>
@@ -22,10 +21,7 @@ export default function ProductNotFound({ category, onRedirect }) {
             <>
               <p>Volte para alguma categoria:</p>
               <button type="submit">
-                Categoria
-                {
-                  removeSpecialCharacters(category.toLowerCase()) !== 'pagina inicial' && ` ${category.toLowerCase()}`
-                }
+                {`Categoria ${category.toLowerCase()}`}
               </button>
               <a
                 href="/pagina-inicial"

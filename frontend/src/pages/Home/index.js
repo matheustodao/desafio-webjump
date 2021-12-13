@@ -48,11 +48,11 @@ import ProductNotFound from './components/ProductNotFound';
 
 export default function Home() {
   // Hooks Variables
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState({});
   const [filtersContext, setFiltersContext] = useState([]);
-  const [filteredProducts, setFilteredProducts] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const searchTerm = useRef('');
+  const [filteredProducts, setFilteredProducts] = useState(null);
   const { pathname: allPathname } = useLocation();
   const navigate = useNavigate();
 
@@ -60,6 +60,36 @@ export default function Home() {
   const pathname = allPathname.split('/').filter((item) => item !== false && item);
 
   // Functions
+  const handleSearchTerm = useCallback((event) => {
+    event.preventDefault();
+    const filtered = products.data?.filter((item) => {
+      const nameProduct = removeSpecialCharacters(item.name.toLowerCase());
+
+      return nameProduct.includes(removeSpecialCharacters(searchTerm.current.value.toLowerCase()));
+    });
+
+    setFilteredProducts(filtered);
+  });
+
+  const loadProducts = useCallback(async () => {
+    try {
+      setIsLoading(true);
+      setFilteredProducts(null);
+      searchTerm.current.value = '';
+
+      const { categoryProduct } = await ProductsService.listProducts();
+      const [productByCategory] = categoryProduct.filter((product) => (
+        allPathname.includes(product.path) && product
+      ));
+
+      if (productByCategory) {
+        return setProducts(productByCategory);
+      }
+    } finally {
+      setIsLoading(false);
+    }
+  }, [allPathname]);
+
   const lengthProducts = useMemo(() => {
     if (products) {
       return products.data?.length;
@@ -83,48 +113,14 @@ export default function Home() {
     contentPerPage: 12,
   });
 
-  const handleSearchTerm = useCallback((event) => {
-    event.preventDefault();
-    const filtered = products.data?.filter((item) => {
-      const nameProduct = removeSpecialCharacters(item.name.toLowerCase());
-
-      return nameProduct.includes(removeSpecialCharacters(searchTerm.current.value.toLowerCase()));
-    });
-
-    setFilteredProducts(filtered);
-  });
-
-  const loadProducts = useCallback(async () => {
-    try {
-      setIsLoading(true);
-      setFilteredProducts(null);
-      searchTerm.current.value = '';
-      const { productsList, productsInfoList } = await ProductsService.listProducts();
-      const [productByCategory] = productsInfoList.filter((product) => (
-        allPathname.includes(product.path) && product
-      ));
-
-      if (productByCategory) {
-        return setProducts(productByCategory);
-      }
-      setProducts({ data: productsList, category: 'Página Inicial' });
-    } catch (error) {
-      return error;
-    } finally {
-      setIsLoading(false);
-    }
-  }, [allPathname]);
-
   useEffect(() => {
-    setPage(1);
-    async function loadFilters() {
+    (async () => {
       const { filters } = await ProductsService.listFilters();
       setFiltersContext(filters);
-    }
+    })();
 
     loadProducts();
-    loadFilters();
-  }, [loadProducts, lengthProducts]);
+  }, [loadProducts]);
 
   function renderListProducts() {
     if (!filteredProducts) {
@@ -243,10 +239,7 @@ export default function Home() {
             <h2>
               {!filteredProducts
                 ? products?.category
-                : `
-                  Buscou em
-                  ${products?.category.toLowerCase() === 'pagina inicial' ? 'todas as categorias' : products?.category}
-                  por: ${searchTerm.current.value}
+                : `Buscou em ${products?.category?.toLowerCase()} por: ${searchTerm.current.value}
               `}
             </h2>
 
