@@ -1,9 +1,8 @@
-require('dotenv');
 var app = require('connect')()
 var serveStatic = require('serve-static')
 var cors = require('cors');
 
-app.use(cors({ origin: 'https://desafiowebjump.herokuapp.com/' }))
+app.use(cors())
 // Serve up mock-api folder
 app.use('/api', serveStatic('mock-api', {
   'index': false,
