@@ -126,16 +126,11 @@ export const Content = styled.div`
   }
 
   #loader {
-    position: absolute;
-    top: 30%;
-    left: 35%;
-    margin: auto;
-    width: 30%;
-    height: 100%;
-
-    @media screen and (max-width: 578px) {
-      left: 25%;
-    }
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 10%;
   }
 `;
 
@@ -213,6 +208,10 @@ export const ListProducts = styled.div`
   margin-bottom: 2.4rem;
   min-height: 16.8rem;
 
+  :empty {
+    display: none;
+  }
+
   .product__not__found {
     position: absolute;
     width: 100%;
@@ -276,19 +275,12 @@ export const ListProducts = styled.div`
 
   }
 
-
-  @media screen and (max-width: 982px) {
-    grid-template-columns: repeat(3, 15.3rem);
-  }
-
-
   @media screen and (max-width: 872px) {
     grid-template-columns: repeat(2, 21rem);
   }
 
   @media screen and (max-width: 768px) {
     grid-template-columns: repeat(2, 18rem);
-    grid-gap: 12px;
   }
 
   @media screen and (max-width: 697px) {
