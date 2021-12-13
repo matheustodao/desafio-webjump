@@ -3,7 +3,7 @@ var app = require('connect')()
 var serveStatic = require('serve-static')
 var cors = require('cors');
 
-app.use(cors({ origin: process.env.FRONTEND_APPLICATION_URL}))
+app.use(cors({ origin: 'https://desafiowebjump.herokuapp.com/' }))
 // Serve up mock-api folder
 app.use('/api', serveStatic('mock-api', {
   'index': false,
