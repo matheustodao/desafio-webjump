@@ -27,28 +27,28 @@
 
 ## Estrutura das pastas na *src*
 - Assets
-- - Styles
-- --Estilo global e a pasta theme com as cores da utilizada no projeto.
-- --- Images, onde fica todas images e icones
-- ...Components, reaproveitamento dos elementos reutilizaveis de forma global.
-- ...Services, para fazer a requisição com a api
+  - Styles
+  -Estilo global e a pasta theme com as cores da utilizada no projeto.
+    - Images, onde fica todas images e icones
+- Components, reaproveitamento dos elementos reutilizaveis de forma global.
+- Services, para fazer a requisição com a api
 - Hooks
 - Pages
-- `Pasta utils e components dentro das pastas citas, são usados forma local`
+- *Pasta utils e components dentro das pastas citas, são usados forma local*
 
 ## Obrigado!
->...Oi, sou Matheus Todao! estudo programação desde dos 13 ano no entanto fui descobrir
+> Oi, sou Matheus Todao! estudo programação desde dos 13 ano no entanto fui descobrir
 qual linguagem e biblioteca usar de forma profissional após 1 ano e alguns meses.
-Objetivo da minha carreira é me tornar desenvolvedor javascript fullstack (usando principalmente: react, node, react-native),
-...Agradeço desde já pela oportunidade que me deram entrar no processo seletivo.
-...*Aguardo a resposta mesmo sendo "Obrigado(a), mas não foi dessa vez" rsrs*
+Objetivo da minha carreira é me tornar desenvolvedor javascript fullstack (usando principalmente: react, node, react-native).
+* Agradeço desde já pela oportunidade que me deram entrar no processo seletivo.
+* *Aguardo a resposta mesmo sendo "Obrigado(a), mas não foi dessa vez" rsrs*
 
 _______
-[linkedin](https://linkedin.com/in/matheustodao)
-[Github](https://github.com/matheustodao)
-[Meu Site](https://todaomatheus.vercel.app)
+* [linkedin](https://linkedin.com/in/matheustodao)
+* [Github](https://github.com/matheustodao)
+* [Meu Site](https://todaomatheus.vercel.app)
 _______
 
 **Os dois últimos projetos trabalhando atualmente**
-[Lading Page de cryptos com os dados dinâmicos](https://github.com/matheustodao/crypto-cap)
-[MyContacts CRUD de contatos](https://github.com/matheustodao/MyContacts)
+* [Lading Page de cryptos com os dados dinâmicos](https://github.com/matheustodao/crypto-cap)
+* [MyContacts CRUD de contatos](https://github.com/matheustodao/MyContacts)
