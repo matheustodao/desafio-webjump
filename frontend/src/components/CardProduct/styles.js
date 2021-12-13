@@ -28,7 +28,6 @@ export const ImageWrapper = styled.div`
   padding: 9px 8px;
   border: 1px solid ${({ theme }) => theme.colors.grey[300]};
 
-
   img {
     width: 100%;
     height: 100%;
@@ -49,8 +48,7 @@ export const Information = styled.div`
     text-transform: uppercase;
     font-size: 16px;
     text-align: center;
-    max-height: 44px;
-    height: 100%;
+    height: 44px;
   }
 `;
 
@@ -77,6 +75,7 @@ export const WrapperOfPrices = styled.div`
 
 export const PriceOFF = styled.small`
   color: ${({ theme }) => theme.colors.grey[400]};
+  font-size: 1.4rem;
   margin-right: 16px;
   text-decoration: line-through;
   @media screen and (max-width: 605px) {
