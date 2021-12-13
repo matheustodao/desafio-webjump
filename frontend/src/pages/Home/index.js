@@ -21,21 +21,30 @@ import {
   ListProducts,
 } from './styles';
 
+// Images and Icons
 import listIcon from '../../assets/images/icons/list.svg';
 import gridIcon from '../../assets/images/icons/grid.svg';
 import spinnerLoading from '../../assets/images/icons/spinner-loading.svg';
 
+// Custom Hook
+import usePagination from '../../hooks/usePagination';
+
+// Global Components
 import CardProduct from '../../components/CardProduct';
 import Header from '../../components/Header';
 import { InputSearchContainer } from '../../components/InputSearchContainer';
 import Pagination from '../../components/Pagination';
 
+// Services
 import ProductsService from '../../services/ProductsService';
 
+// Utils Local
 import historyNavigation from './utils/isEqualPathname';
 import removeSpecialCharacters from './utils/removeSpecialCharacters';
 
-import usePagination from '../../hooks/usePagination';
+// Local Component
+
+import ProductNotFound from './components/ProductNotFound';
 
 export default function Home() {
   // Hooks Variables
@@ -83,7 +92,7 @@ export default function Home() {
     });
 
     setFilteredProducts(filtered);
-  }, [searchTerm.current.value]);
+  });
 
   const loadProducts = useCallback(async () => {
     try {
@@ -129,52 +138,31 @@ export default function Home() {
         ))
       );
     // eslint-disable-next-line no-else-return
-    } else if (searchTerm) {
-      const goTo = products?.category.toLowerCase() === 'pagina inicial' ? pathname : '/pagina-inicial';
-      return (
-        <form className="product__not__found" onSubmit={() => navigate(goTo)}>
-          <h4>Produto não encontrado nessa categoria!</h4>
-
-          <div>
-
-            {removeSpecialCharacters(products?.category.toLowerCase()) === 'pagina inicial'
-              ? (
-                <>
-                  <p>Volte para à:</p>
-                  <button type="submit">
-                    Todas as categorias
-                  </button>
-                </>
-              )
-              : (
-                <>
-                  <p>Volte para alguma categoria:</p>
-                  <button type="submit">
-                    Categoria
-                    {
-                      removeSpecialCharacters(products?.category.toLowerCase()) !== 'pagina inicial' && ` ${products?.category.toLowerCase()}`
-                    }
-                  </button>
-                  <button
-                    type="submit"
-                    className="last__button"
-                  >
-                    Todas as categorias
-                  </button>
-                </>
-              )}
-          </div>
-        </form>
-      );
     } else {
+      const handleClickNavigateTo = () => (
+        !removeSpecialCharacters(products.category).toLowerCase() === 'pagina inicial'
+          ? navigate('/pagina-inicial')
+          : navigate(pathname)
+      );
       return (
-        filteredProducts?.slice(firstItemContent, lastItemContent)?.map((product) => (
-          <CardProduct
-            key={product.id}
-            product={product}
-            onHandleClickBuy={() => {}}
-          />
-        ))
+        <>
+          {!filteredProducts.length && (
+            <ProductNotFound
+              category={products.category}
+              onRedirect={() => handleClickNavigateTo()}
+            />
+          )}
+
+          {searchTerm && (
+            filteredProducts?.slice(firstItemContent, lastItemContent)?.map((product) => (
+              <CardProduct
+                key={product.id}
+                product={product}
+                onHandleClickBuy={() => {}}
+              />
+            ))
+          )}
+        </>
       );
     }
   }
@@ -187,13 +175,14 @@ export default function Home() {
             <InputSearchContainer
               colorButtonSearch={`${theme.colors.main.secondary}`}
               noValidate
+              onSubmit={handleSearchTerm}
             >
               <input
                 type="search"
                 placeholder="Nome do produto..."
                 ref={searchTerm}
               />
-              <button type="submit" onClick={handleSearchTerm}>buscar</button>
+              <button type="submit">buscar</button>
             </InputSearchContainer>
           </Header>
         )}
