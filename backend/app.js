@@ -1,8 +1,9 @@
+require('dotenv').config();
 var app = require('connect')()
 var serveStatic = require('serve-static')
 var cors = require('cors');
 
-app.use(cors())
+app.use(cors({ origin: process.env.FRONTEND_URL }))
 // Serve up mock-api folder
 app.use('/api', serveStatic('mock-api', {
   'index': false,
@@ -17,6 +18,4 @@ function setJsonHeaders (res, path) {
 // Serve up public folder
 app.use('/', serveStatic('public', {'index': ['index.html', 'index.htm']}))
 
-app.listen(process.env.PORT || 8888, function() {
-    console.log('Acesse: http://localhost:8888')
-});
+app.listen(process.env.PORT || 8888);
