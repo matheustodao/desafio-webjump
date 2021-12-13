@@ -7,7 +7,7 @@ export const InputSearchContainer = styled.form`
   align-items: center;
 
   @media screen and (max-width: 856px) {
-    width: 30.5rem;
+    width: 90%;
   }
 
   input {

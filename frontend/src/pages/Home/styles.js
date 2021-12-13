@@ -119,10 +119,23 @@ export const FilterColorOption = styled.div`
 export const Content = styled.div`
   grid-area: content;
   margin-left: 2.4rem;
-
+  position: relative;
 
   @media screen and (max-width: 551px) {
     width: 100%;
+  }
+
+  #loader {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    margin: auto;
+    width: 30%;
+    height: 100%;
+
+    @media screen and (max-width: 578px) {
+      left: 25%;
+    }
   }
 `;
 

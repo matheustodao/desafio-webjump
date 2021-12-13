@@ -23,6 +23,7 @@ import {
 
 import listIcon from '../../assets/images/icons/list.svg';
 import gridIcon from '../../assets/images/icons/grid.svg';
+import spinnerLoading from '../../assets/images/icons/spinner-loading.svg';
 
 import CardProduct from '../../components/CardProduct';
 import Header from '../../components/Header';
@@ -41,6 +42,7 @@ export default function Home() {
   const [products, setProducts] = useState([]);
   const [filtersContext, setFiltersContext] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
   const searchTerm = useRef('');
   const { pathname: allPathname } = useLocation();
   const navigate = useNavigate();
@@ -85,9 +87,9 @@ export default function Home() {
 
   const loadProducts = useCallback(async () => {
     try {
+      setIsLoading(true);
       setFilteredProducts(null);
       searchTerm.current.value = '';
-
       const { productsList, productsInfoList } = await ProductsService.listProducts();
       const [productByCategory] = productsInfoList.filter((product) => (
         allPathname.includes(product.path) && product
@@ -96,9 +98,11 @@ export default function Home() {
       if (productByCategory) {
         return setProducts(productByCategory);
       }
-      setProducts({ data: productsList, category: 'Pagina Inicial' });
+      setProducts({ data: productsList, category: 'Página Inicial' });
     } catch (error) {
       return error;
+    } finally {
+      setIsLoading(false);
     }
   }, [allPathname]);
 
@@ -133,7 +137,7 @@ export default function Home() {
 
           <div>
 
-            {products?.category.toLowerCase() === 'pagina inicial'
+            {removeSpecialCharacters(products?.category.toLowerCase()) === 'pagina inicial'
               ? (
                 <>
                   <p>Volte para à:</p>
@@ -148,7 +152,7 @@ export default function Home() {
                   <button type="submit">
                     Categoria
                     {
-                      products?.category.toLowerCase() !== 'pagina inicial' && ` ${products?.category.toLowerCase()}`
+                      removeSpecialCharacters(products?.category.toLowerCase()) !== 'pagina inicial' && ` ${products?.category.toLowerCase()}`
                     }
                   </button>
                   <button
@@ -278,15 +282,27 @@ export default function Home() {
             {renderListProducts()}
           </ListProducts>
 
-          {(!filteredProducts && searchTerm) && (
-            <Pagination
-              totalPages={totalPages}
-              onNextPage={nextPage}
-              onPrevPage={prevPage}
-              onSetPage={setPage}
-              page={page}
-            />
-          )}
+          {isLoading
+            ? (
+              <div id="loader">
+                <img
+                  src={spinnerLoading}
+                  alt="Carregando os produtos"
+                  width="100px"
+                  height="100px"
+                />
+              </div>
+            )
+            : (!filteredProducts && searchTerm) && (
+              <Pagination
+                totalPages={totalPages}
+                onNextPage={nextPage}
+                onPrevPage={prevPage}
+                onSetPage={setPage}
+                page={page}
+              />
+            )}
+
         </Content>
       </Container>
     </>
