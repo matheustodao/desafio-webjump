@@ -1,114 +1,60 @@
-# Quer ser desenvolvedor frontend na Webjump?
-Criamos este teste para avaliar seus conhecimentos e habilidades frontend (HTML, CSS e JavaScript).
+# Como testar a aplicação?
 
-## O teste
-O desafio é tornar o layout abaixo em uma página funcional.  
-Não existe certo ou errado, queremos ver como você se sai em situações reais, como este desafio.   
-O tempo necessário para completar o desafio dependerá da sua experiência e ferramentas escolhidas.
 
-Portanto, dê o seu melhor!
 
-:warning: **OBS:** Os layouts podem ser encontrados na pasta **layout** ou através do link: https://xd.adobe.com/view/bcf73053-f8e6-431c-9eb0-bf24304f6fff-e9a4/specs/
+#### [Clica aqui](https://desafiowebjump.herokuapp.com/) para ver a aplicação funcionando.
+<br />
+<br />
 
-![Layout](assets/preview.jpg)
+Ou vai na pasta ***backend*** usa seguinte comandos no terminal.
+> `npm install` após a instalação da node_modules usa `npm start`
+<br />
 
-## Instruções
-- Os arquivos do layout estão no diretório assets deste repositório
-- O conteúdo não é estático. Você deve criar um JavaScript para consultar a lista de categorias a serem exibidas no menu e também para exibir os produtos das categorias.  
-Os dados serão fornecidos por uma API. As instruções estão mais abaixo.
-- Fonte padrão: "Open Sans"
-- Fonte do menu e botão de busca: "Open Sans - Extrabold"
-- As imagens dos produtos estão no diretório public/media
-- Você pode utilizar as tecnologias e bibliotecas que achar melhor (frameworks ou bibliotecas JS / CSS)
-- Crie uma documentação simples comentando sobre as tecnologias e soluções adotadas
-- Se necessário explique também como rodar o seu projeto
+Na pasta ***frontend*** usa seguinte comandos no terminal.
+> `yarn install` após a instalação da node_modules usa `yarn start`
 
-## Requisitos
-- Design responsivo nos breakpoints 320px, 768px, 1024px e 1440px
-- Suporte para IE, Chrome, Safari, Firefox
-- Semântica
 
-## Diferenciais
-- Uso de pré-processadores CSS (Sass, Less)
-- Acessibilidade
-- SEO
-- Performance
-- Fazer os filtros da sidebar funcionarem através de Javascript
-- Utilizar alguma automatização (Grunt, Gulp, ...)
+## Techs externas utilizadas
+- React, uma biblioteca do *javascript* para contrução de UIs.
+- Prop Types, para tipar as props passadas no componente.
+- React Router Dom, para navegação no react.
+- Styled Components,para estilização .
 
-## O que será avaliado
-- Estrutura e organização do código e dos arquivos
-- Soluções adotadas
-- Tecnologias utilizadas
-- Qualidade
-- Fidelidade ao layout
-- Enfim, tudo será observado e levado em conta
+## O que foi feito
+- Filtro por categorias, sendo que *`pagina inicial`* lista todos os produtos.
+- Barra de pesquisa, de acordo com o nome do produto presente na categoria.
+- Paginação dos produtos dinâmica.
+- Responsividade do layout.
+- Conexão com API.
+- UX e CTA.
+- Otimização da imagem e icones usados no frontend (usado: [SVGOMG](https://jakearchibald.github.io/svgomg/)).
 
-## Como iniciar o desenvolvimento
-- Instale o [npm](https://nodejs.org/en/download/)
-- Fork este repositório na sua conta do Bitbucket
-- Crie uma branch com o nome **desafio**
-- Instale as dependências
-```
-npm install
-```
-- Rode a aplicação
-```
-npm start
-```
-- Acesse http://localhost:8888
-- Realize o desenvolvimento na pasta public
+## Estrutura das pastas na *src*
+- Assets
+  - Styles
+  -Estilo global e a pasta theme com as cores da utilizada no projeto.
+    - Images, onde fica todas images e icones
+- Components, reaproveitamento dos elementos reutilizaveis de forma global.
+- Services, para fazer a requisição com a api
+- Hooks
+- Pages
+- *Pasta utils e components dentro das pastas citas, são usados forma local*
 
-## Como enviar seu teste
-- Envie um email para [carreira@webjump.com.br] com o link do seu repositório
+## Obrigado!
+> Oi, sou Matheus Todao! estudo programação desde dos 13 ano no entanto fui descobrir
+qual linguagem e biblioteca usar de forma profissional após 1 ano e alguns meses.
+Objetivo da minha carreira é me tornar desenvolvedor javascript fullstack (usando principalmente: react, node, react-native).
+>> Agradeço desde já pela oportunidade que me deram entrar no processo seletivo.
+  *Aguardo a resposta mesmo sendo "Obrigado(a), mas não foi dessa vez"* rsrs
 
-- Se o seu repositório for privado, solicite os emails das pessoas responsáveis para conceder acesso de leitura ao seu repositório.
+_______
+**Onde pode me encontrar**
 
-## API
-- Categorias: http://localhost:8888/api/V1/categories/list  
-O endpoint de categoria deve ser utilizado para montar o menu do cabeçalho.
+* [Linkedin](https://linkedin.com/in/matheustodao)
+* [Github](https://github.com/matheustodao)
+* [Meu Site](https://todaomatheus.vercel.app)
+_______
 
-**Response**
-```
-{
-  "items": [
-    {
-      "id": 1,
-      "name": "Camisetas",
-      "path": "camisetas"
-    },
-    ...
-  ]
-}
-```
-
-- Produtos da Categoria: http://localhost:8888/api/V1/categories/{id}  
-O endpoint de produtos da categoria deve ser consumido para listar os produtos da categoria quando o usuário clicar em um dos menus.
-
-**Response**
-```
-{
-  "filters": [
-      {
-          "color": "Cor"
-      }
-  ],
-  "items": [
-    {
-      "id": 31,
-      "sku": "sku-31",
-      "path": "tenis-preto-couro",
-      "name": "Tênis Preto Couro",
-      "image": "media/shoes-1.jpg",
-      "price": 129.9,
-      "specialPrice": 80, //Optional
-      "filter": [
-        {
-          "color": "Preta"
-        }
-      ]
-    },
-    ...
-  ]
-}
-```
+**Os dois últimos projetos trabalhando atualmente**
+* [Lading Page de cryptos com os dados dinâmicos](https://github.com/matheustodao/crypto-cap)
+* [MyContacts CRUD de contatos](https://github.com/matheustodao/MyContacts)
