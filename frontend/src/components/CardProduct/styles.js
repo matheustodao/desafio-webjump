@@ -38,9 +38,10 @@ export const Information = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  height: 100px;
+  margin: 13px 0;
+  justify-content: space-between;
   width: 100%;
-  padding: 9px 8px;
 
   h3 {
     color: ${({ theme }) => theme.colors.grey[500]};
@@ -48,8 +49,12 @@ export const Information = styled.div`
     text-transform: uppercase;
     font-size: 16px;
     text-align: center;
-    height: 44px;
   }
+
+  @media screen and (max-width: 619px) {
+    height: 100%;
+  }
+
 `;
 
 export const WrapperOfPrices = styled.div`
@@ -64,12 +69,11 @@ export const WrapperOfPrices = styled.div`
     font-size: 18px;
   }
 
-  @media screen and (max-width: 605px) {
+  @media screen and (max-width: 798px) {
     flex-direction: column;
-    margin-top: 28px;
+    margin-top: 1rem;
     font-size: 2.1rem;
     text-align: center;
-    justify-content: center;
   }
 `;
 
@@ -78,10 +82,15 @@ export const PriceOFF = styled.small`
   font-size: 1.4rem;
   margin-right: 16px;
   text-decoration: line-through;
-  @media screen and (max-width: 605px) {
-    flex-direction: column;
+
+  @media screen and (max-width: 798px) {
     margin-bottom: 1rem;
     font-size: 1.5rem;
     margin-right: 0;
+  }
+
+  @media screen and (max-width: 364px) {
+    margin-bottom: 0;
+    font-size: 1.5rem;
   }
 `;

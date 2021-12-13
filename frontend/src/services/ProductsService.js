@@ -9,10 +9,15 @@ class ProductsService {
     const tShirts = await this.listTShirts();
     const pants = await this.listPants();
     const shoes = await this.listShoes();
-    const productsList = [].concat(tShirts.data, pants.data, shoes.data);
-    const productsInfoList = [].concat(tShirts, pants, shoes);
+    const data = [].concat(tShirts.data, pants.data, shoes.data);
+    const allProducts = {
+      category: 'Todas as categorias',
+      path: '/pagina-inicial',
+      data,
+    };
+    const categoryProduct = [].concat(tShirts, pants, shoes, allProducts);
 
-    return { productsInfoList, productsList };
+    return { categoryProduct };
   }
 
   async listTShirts() {
