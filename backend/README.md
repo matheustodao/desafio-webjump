@@ -1,11 +1,12 @@
 # Como testar a aplicação?
 
 #### [Clica aqui](https://desafiowebjump.herokuapp.com/pagina-inicial) para ver a aplicação funcionando.
-
-* Ou vai na pasta ***backend*** usa seguinte comandos no terminal.
+<br />
+<br />
+Ou vai na pasta ***backend*** usa seguinte comandos no terminal.
 > `npm install` após a instalação da node_modules usa `npm start`
-
-*Na pasta ***frontend*** usa seguinte comandos no terminal.
+<br />
+Na pasta ***frontend*** usa seguinte comandos no terminal.
 > `yarn install` após a instalação da node_modules usa `yarn start`
 
 
