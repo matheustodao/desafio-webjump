@@ -1,13 +1,12 @@
 # Como testar a aplicação?
 
+`***Se não *[Clica aqui](https://desafiowebjump.herokuapp.com/pagina-inicial)* para ver a aplicação funcionando.***`
 
-...Na pasta ***backend*** usa seguinte comandos no terminal.
+*Na pasta ***backend*** usa seguinte comandos no terminal.
 > `npm install` após a instalação da node_modules usa `npm start`
 
-...Na pasta ***frontend*** usa seguinte comandos no terminal.
+*Na pasta ***frontend*** usa seguinte comandos no terminal.
 > `yarn install` após a instalação da node_modules usa `yarn start`
-
-### Se não *[Clica aqui](https://desafiowebjump.herokuapp.com/pagina-inicial)* para ver a aplicação funcionando.
 
 
 ## Techs externas utilizadas
@@ -44,7 +43,9 @@ Objetivo da minha carreira é me tornar desenvolvedor javascript fullstack (usan
   *Aguardo a resposta mesmo sendo "Obrigado(a), mas não foi dessa vez"* rsrs
 
 _______
-* [linkedin](https://linkedin.com/in/matheustodao)
+**Onde pode me encontrar**
+
+* [Linkedin](https://linkedin.com/in/matheustodao)
 * [Github](https://github.com/matheustodao)
 * [Meu Site](https://todaomatheus.vercel.app)
 _______
