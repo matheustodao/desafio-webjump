@@ -1,4 +1,4 @@
-require('dotenv/config');
+require('dotenv');
 var app = require('connect')()
 var serveStatic = require('serve-static')
 var cors = require('cors');
