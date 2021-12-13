@@ -18,6 +18,6 @@ function setJsonHeaders (res, path) {
 // Serve up public folder
 app.use('/', serveStatic('public', {'index': ['index.html', 'index.htm']}))
 
-app.listen(8888, function() {
+app.listen(process.env.PORT || 8888, function() {
     console.log('Acesse: http://localhost:8888')
 });
