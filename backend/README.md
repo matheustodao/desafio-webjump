@@ -17,13 +17,13 @@
 - Styled Components,para estilização .
 
 ## O que foi feito
-- Filtro por categorias, sendo que `*pagina inicial*` lista todos os produtos.
+- Filtro por categorias, sendo que *`pagina inicial`* lista todos os produtos.
 - Barra de pesquisa, de acordo com o nome do produto presente na categoria.
 - Paginação dos produtos dinâmica.
 - Responsividade do layout.
 - Conexão com API.
 - UX e CTA.
-- Otimização da imagem e icones usados no frontend [SVGOMG](https://jakearchibald.github.io/svgomg/).
+- Otimização da imagem e icones usados no frontend (usado: [SVGOMG](https://jakearchibald.github.io/svgomg/)).
 
 ## Estrutura das pastas na *src*
 - Assets
@@ -40,8 +40,8 @@
 > Oi, sou Matheus Todao! estudo programação desde dos 13 ano no entanto fui descobrir
 qual linguagem e biblioteca usar de forma profissional após 1 ano e alguns meses.
 Objetivo da minha carreira é me tornar desenvolvedor javascript fullstack (usando principalmente: react, node, react-native).
-* Agradeço desde já pela oportunidade que me deram entrar no processo seletivo.
-* *Aguardo a resposta mesmo sendo "Obrigado(a), mas não foi dessa vez" rsrs*
+>> Agradeço desde já pela oportunidade que me deram entrar no processo seletivo.
+  *Aguardo a resposta mesmo sendo "Obrigado(a), mas não foi dessa vez"* rsrs
 
 _______
 * [linkedin](https://linkedin.com/in/matheustodao)
