@@ -1,8 +1,8 @@
 # Como testar a aplicação?
 
-***`Se não *[Clica aqui](https://desafiowebjump.herokuapp.com/pagina-inicial)* para ver a aplicação funcionando.`***
+**[Clica aqui](https://desafiowebjump.herokuapp.com/pagina-inicial)* para ver a aplicação funcionando.**
 
-*Na pasta ***backend*** usa seguinte comandos no terminal.
+*Ou vai na pasta ***backend*** usa seguinte comandos no terminal.
 > `npm install` após a instalação da node_modules usa `npm start`
 
 *Na pasta ***frontend*** usa seguinte comandos no terminal.
