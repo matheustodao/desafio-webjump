@@ -47,11 +47,12 @@ Objetivo da minha carreira é me tornar desenvolvedor javascript fullstack (usan
 _______
 **Onde pode me encontrar**
 
-* [Linkedin](https://linkedin.com/in/matheustodao)<br>
-* [Github](https://github.com/matheustodao)<br>
-* [Meu Site](https://todaomatheus.vercel.app)<br>
+- [Linkedin](https://linkedin.com/in/matheustodao)<br>
+- [Github](https://github.com/matheustodao)<br>
+- [Meu Site](https://todaomatheus.vercel.app)<br>
 _______
 
 **Os dois últimos projetos trabalhando atualmente**
-* [Lading Page de cryptos com os dados dinâmicos](https://github.com/matheustodao/crypto-cap)<br>
-* [MyContacts CRUD de contatos](https://github.com/matheustodao/MyContacts)<br>
+
+- [Lading Page de cryptos com os dados dinâmicos](https://github.com/matheustodao/crypto-cap)<br>
+- [MyContacts CRUD de contatos](https://github.com/matheustodao/MyContacts)<br>
